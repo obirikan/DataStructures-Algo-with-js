@@ -20,9 +20,15 @@ var Stack=function (){
     this.count=0;
     this.storage={};
 
+
     this.push=(value)=>{
      this.storage[this.count]=value
      this.count+=1
+    }
+
+    this.mention=(name,age)=>{
+        let pro=`my name is ${name} and i am ${age} years`
+        return pro
     }
 
     this.pop=()=>{
@@ -49,6 +55,6 @@ stack.push('kay')
 stack.push('blay')
 stack.push('ray')
 console.log(stack.pop())
-console.log(stack.peek())
-
+console.log(stack.size())
+console.log(stack.mention('kay',20))
 
